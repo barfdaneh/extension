@@ -75,7 +75,7 @@ const Options = () => {
   }, []);
 
   return (
-    <div className="w-[600px] mt-4 mx-auto border-2">
+  <div className="w-[600px] mt-4 mx-auto border-2 bg-[var(--background)] text-[var(--foreground)]">
       <div className="z-40 relative">
         <AppBar
           onKeyChange={onKeyChange}
@@ -83,7 +83,7 @@ const Options = () => {
           keypairs={data.keypairs}
         ></AppBar>
       </div>
-      <div className="z-10 relative flex flex-col space-y-4 p-4 bg-gray-100">
+  <div className="z-10 relative flex flex-col space-y-4 p-4 bg-[var(--primary)]">
         <ToggleRecents />
       </div>
       {!notEmpty && (
@@ -96,9 +96,9 @@ const Options = () => {
         </div>
       )}
       {notEmpty && (
-        <div className="z-10 relative flex flex-col space-y-4 p-4 bg-gray-100">
+  <div className="z-10 relative flex flex-col space-y-4 p-4 bg-[var(--primary)]">
           <Panel>
-            <h1 className="font-semibold text-lg text-aka-blue pt-1">
+            <h1 className="font-semibold text-lg text-[var(--secondary)] pt-1">
               Allowed Permissions
             </h1>
 
@@ -109,7 +109,7 @@ const Options = () => {
             />
             {getDeniedPolicies().length > 0 && (
               <>
-                <h1 className="font-semibold text-lg text-aka-blue pt-2">
+                <h1 className="font-semibold text-lg text-[var(--secondary)] pt-2">
                   Denied Permissions
                 </h1>
                 <Permissions
@@ -125,7 +125,7 @@ const Options = () => {
             </p>
           </Panel>
           <Panel>
-            <h1 className="font-semibold text-lg text-aka-blue pt-1">
+            <h1 className="font-semibold text-lg text-[var(--secondary)] pt-1">
               Preferred Relays
             </h1>
 
@@ -133,7 +133,7 @@ const Options = () => {
           </Panel>
         </div>
       )}
-      <div className="z-10 relative flex flex-col space-y-4 p-4 bg-gray-100">
+  <div className="z-10 relative flex flex-col space-y-4 p-4 bg-[var(--primary)]">
         <Panel>
           <h1 className="font-semibold text-lg text-aka-blue pt-1">
             Tips appreciated!

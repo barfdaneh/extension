@@ -40,12 +40,12 @@ function ProfileCreate() {
   };
 
   return (
-    <div className="p-5 w-[400px]">
+  <div className="p-5 w-[400px] bg-[var(--background)] text-[var(--foreground)]">
       <Panel>
-        <div className="h-6 w-6 cursor-pointer hover:bg-gray-100">
+  <div className="h-6 w-6 cursor-pointer hover:bg-[var(--primary)]">
           <BackButton />
         </div>
-        <h1 className="font-semibold text-lg text-aka-blue">New Profile</h1>
+  <h1 className="font-semibold text-lg text-[var(--secondary)]">New Profile</h1>
         <Form
           id="profileForm"
           action="/profiles/create"
@@ -64,7 +64,7 @@ function ProfileCreate() {
                 onFocus={(e) =>
                   setErrors({ privateKey: "", name: errors.name })
                 }
-                className="w-full bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-white p-2 placeholder:italic placeholder:text-slate-400 border border-slate-300"
+                className="w-full bg-[var(--primary)] text-[var(--secondary)] p-2 placeholder:italic placeholder:text-[var(--secondary)]/40 border border-[var(--secondary)]"
               />
               <div className="h-4 text-red-500">
                 {errors?.privateKey && <span>{errors.privateKey}</span>}
@@ -82,7 +82,7 @@ function ProfileCreate() {
                 onFocus={(e) =>
                   setErrors({ privateKey: errors.privateKey, name: "" })
                 }
-                className="w-full bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-white p-2 placeholder:italic placeholder:text-slate-400 border border-slate-300"
+                className="w-full bg-[var(--primary)] text-[var(--secondary)] p-2 placeholder:italic placeholder:text-[var(--secondary)]/40 border border-[var(--secondary)]"
               />
               <div className="h-4 text-red-500">
                 {errors?.name && <span>{errors.name}</span>}
@@ -96,7 +96,7 @@ function ProfileCreate() {
                 id="color"
                 name="color"
                 defaultValue={defaultColor}
-                className="w-full h-10 p-1 bg-gray-100 dark:bg-slate-900 border border-slate-300"
+                className="w-full h-10 p-1 bg-[var(--primary)] border border-[var(--secondary)]"
               />
             </div>
           </div>
@@ -105,9 +105,9 @@ function ProfileCreate() {
               {actionError}
             </div>
           )}
-          <div className="mx-auto w-[4.5rem] pt-4">
-            <InputButton>Save</InputButton>
-          </div>
+            <div className="mx-auto w-[4.5rem] pt-4">
+              <InputButton>Save</InputButton>
+            </div>
         </Form>
       </Panel>
     </div>

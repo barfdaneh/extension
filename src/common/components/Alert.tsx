@@ -5,14 +5,14 @@ function Alert({ children }) {
     <>
       <div
         id="alert-4"
-        className="flex px-2 py-2 mb-4 text-aka-blue rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+        className="flex px-2 py-2 mb-4 text-[var(--secondary)] rounded-lg bg-[var(--primary)] border border-[var(--secondary)]"
         role="alert"
       >
         <span className="sr-only">Info</span>
         <div className="ml-3 text-sm font-medium">{children}</div>
         <button
           type="button"
-          className="ml-auto -mx-1.5 -my-1.5 bg-yellow-50 text-yellow-500 rounded-lg focus:ring-2 focus:ring-yellow-400 p-1.5 hover:bg-yellow-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-yellow-300 dark:hover:bg-gray-700"
+          className="ml-auto -mx-1.5 -my-1.5 bg-[var(--primary)] text-[var(--secondary)] rounded-lg focus:ring-2 focus:ring-[var(--secondary)] p-1.5 hover:bg-[var(--secondary)] hover:text-[var(--primary)] inline-flex h-8 w-8"
           aria-label="Close"
           onClick={(e) => close()}
         >

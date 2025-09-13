@@ -84,7 +84,7 @@ function getHtmlPlugins(chunks) {
   return chunks.map(
     (chunk) =>
       new HtmlPlugin({
-        title: "AKA Profiles",
+        title: "Barfdaneh",
         filename: `${chunk}.html`,
         chunks: [chunk],
       })

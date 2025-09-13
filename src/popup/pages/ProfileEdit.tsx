@@ -25,12 +25,12 @@ function ProfileEdit() {
   const error = useActionData() as string;
 
   return (
-    <div className="flex flex-col items-center flex-1 w-[360px] ">
+  <div className="flex flex-col items-center flex-1 w-[360px] bg-[var(--background)] text-[var(--foreground)] ">
       <Panel>
-        <div className="h-6 w-6 cursor-pointer hover:bg-gray-100">
+  <div className="h-6 w-6 cursor-pointer hover:bg-[var(--primary)]">
           <BackButton />
         </div>
-        <h1 className="font-semibold text-lg text-aka-blue pt-1">
+  <h1 className="font-semibold text-lg text-[var(--secondary)] pt-1">
           Edit {keypair.name}
         </h1>
         <Form id="profileForm" method="post">
@@ -49,7 +49,7 @@ function ProfileEdit() {
               name="name"
               placeholder="profile name"
               defaultValue={keypair.name}
-              className="w-full bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-white p-2 placeholder:italic placeholder:text-slate-400 border border-slate-300"
+              className="w-full bg-[var(--primary)] text-[var(--secondary)] p-2 placeholder:italic placeholder:text-[var(--secondary)]/40 border border-[var(--secondary)]"
             />
             <div className="h-4 text-red-500">
               {error && <span>{error}</span>}
@@ -63,7 +63,7 @@ function ProfileEdit() {
               id="color"
               name="color"
               defaultValue={profile.color}
-              className="w-full h-10 p-1 bg-gray-100 dark:bg-slate-900 border border-slate-300"
+              className="w-full h-10 p-1 bg-[var(--primary)] border border-[var(--secondary)]"
             />
           </div>
 
@@ -82,7 +82,7 @@ function ProfileEdit() {
           </div>
         </Form>
         <div>
-          <div className="flex justify-end text-slate-500">
+          <div className="flex justify-end text-[var(--secondary)]/70">
             <Link className="hover:text-red-500" to={`/profiles/delete`}>
               delete
             </Link>

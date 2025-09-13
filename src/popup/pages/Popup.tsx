@@ -14,18 +14,18 @@ const Popup = () => {
   const errors = useActionData() as { privateKey: "" };
 
   return (
-    <div className="flex flex-col items-center flex-1 w-[400px] ">
-      <div className=" w-full bg-aka-yellow p-1">
-        <Splash className="mx-auto  h-48 w-48 fill-aka-blue" />
+    <div className="flex flex-col items-center flex-1 w-[400px] bg-[var(--background)]">
+      <div className="w-full bg-[var(--primary)] p-1">
+        <Splash className="mx-auto h-48 w-48 fill-[var(--secondary)]" />
       </div>
 
       <div className="p-5">
         <Panel>
           <div className="flex flex-col items-center flex-1 p-2 w-auto gap-1">
             <div className="pb-2">
-              <h1 className="font-semibold text-lg text-aka-blue">Welcome!</h1>
-              <p className="text-slate-500 dark:text-slate-400" />
-              <span className="font-semibold">AKA Profiles</span> is a Nostr
+              <h1 className="font-semibold text-lg text-[var(--secondary)]">Welcome!</h1>
+              <p className="text-[var(--secondary)]/70" />
+              <span className="font-semibold">Barfdaneh</span> is a Nostr
               signing extension supporting multiple keys. Please enter your
               first private key to begin.
             </div>
@@ -35,13 +35,13 @@ const Popup = () => {
               className="w-full"
               autoComplete="off"
             >
-              <div className="text-black">
+              <div className="text-[var(--secondary)]">
                 <input
                   type="text"
                   id="privateKey"
                   name="privateKey"
                   autoFocus
-                  className="w-full bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-white p-2 placeholder:italic placeholder:text-slate-400 border border-slate-300"
+                  className="w-full bg-[var(--primary)] text-[var(--secondary)] p-2 placeholder:italic placeholder:text-[var(--secondary)]/40 border border-[var(--secondary)]"
                   placeholder="private key (nsec or hex)"
                 />
                 <div className="h-4 text-red-500">
@@ -55,10 +55,10 @@ const Popup = () => {
                 </div>
               </div>
               <div className="pt-4">
-                <p className="text-center text-slate-500 dark:text-slate-400">
+                <p className="text-center text-[var(--secondary)]/70">
                   Don't have a private key yet? Try{" "}
                   <a
-                    className="font-semibold text-blue-900 dark:text-blue-200"
+                    className="font-semibold underline"
                     href="https://nosta.me"
                     target="_blank"
                   >

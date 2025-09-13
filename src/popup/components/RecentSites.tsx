@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getRecents } from "../../common/common";
 import Panel from "../../common/components/Panel";
+import { Button } from "../../components/ui/button";
 // Define the type for items returned by getRecents
 type RecentItem = {
   host: string;
@@ -60,7 +61,7 @@ const RecentSites: React.FC<{
             return (
               <li
                 key={index}
-                className="flex items-center justify-between p-1 hover:bg-gray-200 cursor-pointer mb-1"
+                className="flex items-center justify-between p-1 hover:bg-[var(--secondary)] hover:text-[var(--primary)] cursor-pointer mb-1 rounded"
               >
                 {/* Anchor link to the URL */}
                 <a
@@ -87,14 +88,9 @@ const RecentSites: React.FC<{
       </div>
       {recents.length > 5 && (
         <div className="flex flex-col items-center">
-          <button
-            onClick={(e) => {
-              onShowMore(!showMore);
-            }}
-            className="bg-transparent hover:bg-aka-blue-light text-aka-blue font-semibold hover:text-white py-1 px-2 border border-aka-blue-light hover:border-transparent rounded"
-          >
+          <Button onClick={() => onShowMore(!showMore)}>
             {showMore ? "show less" : "show more"}
-          </button>
+          </Button>
         </div>
       )}
     </Panel>

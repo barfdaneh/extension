@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --primary: #ffffff;
+        --secondary: #000000;
+        --background: #ffffff;
+        --foreground: #000000;
+    }
+    .dark {
+        --primary: #000000;
+        --secondary: #ffffff;
+        --background: #000000;
+        --foreground: #ffffff;
+    }
+}
+
 body {
-    height: 100%;
-    width: 400px;
+        height: 100%;
+        width: 400px;
+        background-color: var(--background);
+        color: var(--foreground);
 }

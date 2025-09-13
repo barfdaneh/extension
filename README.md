@@ -2,13 +2,13 @@ This is a personal project & Lightning tips or a quick thank you is appreciated.
 Nostr: [neilck](https://coracle.social/people/nprofile1qythwumn8ghj7un9d3shjtnswf5k6ctv9ehx2ap0qywhwumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmd9uqsuamnwvaz7tmwdaejumr0dshsqgqqqqqqxa65qfqnt9dvnctp90k4pzq4ax8vf25adz3x9rlkz4y9durgmmyv)\
 Lightning: tensesing63@walletofsatoshi.com
 
-# AKA Profiles
+# Barfdaneh
 
-<img src="docs/images/screenshot.png" width="520px"  alt="AKA Profiles screen">
+<img src="docs/images/screenshot.png" width="520px"  alt="Barfdaneh screen">
 
 ## Nostr signer extension with multiple keys
 
-AKA Profiles is a [Chrome Extension](https://chrome.google.com/webstore/detail/aka-profiles/ncmflpbbagcnakkolfpcpogheckolnad), based on [nos2x](https://github.com/fiatjaf/nos2x) and adds support for multiple public / private key pairs.
+Barfdaneh is a [Chrome Extension](https://chrome.google.com/webstore/detail/aka-profiles/ncmflpbbagcnakkolfpcpogheckolnad), based on [nos2x](https://github.com/fiatjaf/nos2x) and adds support for multiple public / private key pairs.
 
 The primary purpose is enabling web apps to request the signing of events using the locally stored private key, thereby eliminating the need to give the private key to web apps.
 
@@ -90,7 +90,7 @@ This feature can be enable / disabled in Options.
 
 These javascript functions are made available to web apps through injection of `window.nostr` script element defined in `nostr-provider.js` into the DOM.
 
-AKA Profiles uses the same app permission model as nos2x
+Barfdaneh uses the same app permission model as nos2x
 
 ## User Guide
 
@@ -110,13 +110,13 @@ Otherwise, use the files in the `dist` folder after compiling:
 2. Enable Developer mode by clicking Developer mode toggle (top right)
 3. Click Load Unpacked button in the menu bar.
 4. Select the `dist` folder.
-5. Click the Extension icon in Chrome, and click AKA Profiles icon.
+5. Click the Extension icon in Chrome, and click Barfdaneh icon.
 6. Paste in your private key.
 
 ### Tips
 
 - "Add new profile..." is available in dropdown in top right
-- Right click on AKA Profiles icon and select Options to revoke app permissions or to add preferred relays
+- Right click on Barfdaneh icon and select Options to revoke app permissions or to add preferred relays
 
 If Access Request prompt dialog doesn't appear when loading a web page
 
@@ -135,7 +135,7 @@ Search repositories for `window.nostr.getPublicKey()`
 
 ## Developer Notes
 
-As much underlying code as possible was reused from `nos2x`. For reference, this is how both `AKA Profiles` and `nos2x` processes application requests.
+As much underlying code as possible was reused from `nos2x`. For reference, this is how both `Barfdaneh` and `nos2x` processes application requests.
 
 As specified in [NIP-07](https://github.com/nostr-protocol/nips/blob/master/07.md), the browser extension's `contentScript.js` injects nostr-provider.js script into element `window.nostr` on page load. The calling application needs to wait for the insertion before accessing.
 

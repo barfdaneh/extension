@@ -8,16 +8,16 @@ export default function ErrorPage() {
   return (
     <div
       id="error-page"
-      className="bg-gray-100 dark:bg-slate-900 flex flex-col items-center h-80 pt-4 w-[360px]"
+      className="bg-[var(--background)] flex flex-col items-center h-80 pt-4 w-[360px]"
     >
-      <h1 className="text-slate-900 dark:text-white text-lg">Oops!</h1>
-      <p className="text-slate-500 dark:text-slate-400">
+      <h1 className="text-[var(--foreground)] text-lg">Oops!</h1>
+      <p className="text-[var(--foreground)]/70">
         Sorry, an unexpected error has occurred.
       </p>
-      <p className="text-slate-500 dark:text-slate-400">
+      <p className="text-[var(--foreground)]/70">
         <i>{error.statusText || error.message}</i>
       </p>
-      <p className="text-slate-500 dark:text-slate-400">
+      <p className="text-[var(--foreground)]/70">
         <Link to="/">Back to home</Link>
       </p>
     </div>

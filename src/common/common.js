@@ -187,38 +187,43 @@ function schemaUpdate(pubkey, profileData) {
   let needsSave = false;
 
   // from version < 1.0.4
-  if (profileData.permissions) {
+
+  if (profileData && profileData.permissions) {
     delete profileData.permissions;
     needsSave = true;
   }
 
-  if (!profileData.policies) {
+
+  if (profileData && !profileData.policies) {
     profileData.policies = {};
     needsSave = true;
   }
 
-  if (!profileData.relays) {
+
+  if (profileData && !profileData.relays) {
     profileData.relays = {};
     needsSave = true;
   }
 
-  if (profileData.protocol_handler === undefined) {
+
+  if (profileData && profileData.protocol_handler === undefined) {
     profileData.protocol_handler = "";
     needsSave = true;
   }
 
-  if (profileData.color === undefined) {
+
+  if (profileData && profileData.color === undefined) {
     profileData.color = getDefaultColor(pubkey);
     needsSave = true;
   }
 
-  if (needsSave) {
+  if (needsSave && profileData) {
     // console.log( "schemaUpdate updating profile: " + stringify.JSON(profileData) );
     saveProfile(pubkey, profileData);
   } else {
     // console.log("schemaUpdate pass, no schema update needed");
   }
-  return profileData;
+  return profileData || {};
 }
 
 // returns {polides: {[{}]}, relays: {[]}, ... }

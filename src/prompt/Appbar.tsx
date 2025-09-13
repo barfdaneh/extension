@@ -9,7 +9,7 @@ function AppBar() {
             <div className="flex items-center">
               <img src="logo.svg" alt="Logo" className="h-4 w-4 mr-2" />
               <span className="text-slate-900 dark:text-white font-semibold text-lg">
-                AKA Profiles
+                Barfdaneh
               </span>
             </div>
           </div>

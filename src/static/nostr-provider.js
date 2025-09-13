@@ -53,7 +53,7 @@ window.nostr = {
       window.postMessage(
         {
           id,
-          ext: "aka-profiles",
+          ext: "barfdaneh",
           type,
           params,
         },
@@ -84,12 +84,12 @@ window.nostr = {
 };
 
 window.addEventListener("message", (message) => {
-  if (message.data && message.data.ext === "aka-profiles") {
+  if (message.data && message.data.ext === "barfdaneh") {
     // console.log("[np] recived message from [cs]: " + JSON.stringify(message.data));
   }
 
   if (
-    message.data.ext === "aka-profiles" &&
+    message.data.ext === "barfdaneh" &&
     message.data.type === "accountChanged"
   ) {
     if (window.nostr && window.nostr._accountChangedListeners) {
@@ -106,14 +106,14 @@ window.addEventListener("message", (message) => {
     !message.data ||
     message.data.response === null ||
     message.data.response === undefined ||
-    message.data.ext !== "aka-profiles" ||
+    message.data.ext !== "barfdaneh" ||
     !window.nostr._requests[message.data.id]
   )
     return;
 
   if (message.data.response.error) {
     let error = new Error(
-      "aka-profiles: " + message.data.response.error.message
+      "barfdaneh: " + message.data.response.error.message
     );
     error.stack = message.data.response.error.stack;
     window.nostr._requests[message.data.id].reject(error);

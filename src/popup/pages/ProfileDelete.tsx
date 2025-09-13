@@ -9,10 +9,10 @@ function ProfileDelete() {
   const currentProfile = useLoaderData() as KeyPair;
 
   return (
-    <div className="flex flex-col items-center flex-1 w-[360px] ">
-      <div id="panel_outer" className="p-5">
+  <div className="flex flex-col items-center flex-1 w-[360px] bg-[var(--background)] text-[var(--foreground)] ">
+  <div id="panel_outer" className="p-5">
         <Panel>
-          <div className="h-6 w-6 cursor-pointer hover:bg-gray-100">
+          <div className="h-6 w-6 cursor-pointer hover:bg-[var(--primary)]">
             <BackButton />
           </div>
           <div
@@ -23,7 +23,7 @@ function ProfileDelete() {
               id="top_row"
               className="w-full flex flex-col flex-nowrap justify-between space-y-1"
             >
-              <div className="font-semibold text-lg text-aka-blue">
+              <div className="font-semibold text-lg text-[var(--secondary)]">
                 <p>Remove profile {currentProfile.name}?</p>
               </div>
               <div className="italic">
@@ -54,7 +54,7 @@ function ProfileDelete() {
               />
               <button
                 type="submit"
-                className="bg-red-600 hover:bg-blue text-white font-bold py-2 px-4 rounded"
+                className="w-full bg-red-600 hover:bg-[var(--secondary)] text-white hover:text-[var(--primary)] font-bold py-2 px-4 rounded shadow-none"
               >
                 <p className="tracking-widest">Remove</p>
               </button>

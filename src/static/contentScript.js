@@ -10,7 +10,7 @@ window.addEventListener("message", async (message) => {
   if (message.source !== window) return;
   if (!message.data) return;
   if (!message.data.params) return;
-  if (message.data.ext !== "aka-profiles") return;
+  if (message.data.ext !== "barfdaneh") return;
   //console.log("[cs] received message from [np]: " + JSON.stringify(message.data));
 
   // pass on to background
@@ -29,7 +29,7 @@ window.addEventListener("message", async (message) => {
 
   // return response
   window.postMessage(
-    { id: message.data.id, ext: "aka-profiles", response },
+    { id: message.data.id, ext: "barfdaneh", response },
     message.origin
   );
 });
@@ -39,7 +39,7 @@ browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   // console.log("[cs] received message from [bg] " + JSON.stringify(request));
 
   if (request.accountChanged) {
-    const mesg = { ext: "aka-profiles", type: "accountChanged", origin: "*" };
+    const mesg = { ext: "barfdaneh", type: "accountChanged", origin: "*" };
     // console.log("[cs] sending message to [np] " + JSON.stringify(mesg));
     window.postMessage(mesg, mesg.origin);
   }

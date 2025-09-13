@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "../../components/ui/button";
 import * as storage from "../../common/storage";
 import { Relay } from "../../common/model/Relay";
 import { Policy } from "../../common/model/Policy";
@@ -69,19 +70,12 @@ export function PermissionItem(props: {
       <div id="detail" className="flex flex-grow flex-col justify-center">
         <div className="font-semibold">{line1}</div>
 
-        <div className="text-xs text-slate-500 dark:text-slate-400">
+        <div className="text-xs text-[var(--secondary)]/60 dark:text-[var(--secondary)]/60">
           {line2}
         </div>
       </div>
       <div id="action" className="">
-        <button
-          onClick={(e) => {
-            onButtonClick(e);
-          }}
-          className="bg-transparent hover:bg-aka-blue-light text-aka-blue font-semibold hover:text-white py-1 px-2 border border-aka-blue-light hover:border-transparent rounded"
-        >
-          revoke
-        </button>
+        <Button onClick={onButtonClick}>Remove</Button>
       </div>
     </div>
   );

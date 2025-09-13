@@ -1,11 +1,11 @@
 {
-  "name": "AKA Profiles",
+  "name": "Barfdaneh",
   "description": "Nostr Signer Extension supporting multiple public / private key pairs.",
-  "version": "1.0.10",
+  "version": "0.1.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "app.html",
-    "default_title": "AKA Profiles",
+    "default_title": "Barfdaneh",
     "default_icon": "icon.png"
   },
   "icons": {

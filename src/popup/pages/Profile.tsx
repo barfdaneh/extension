@@ -46,7 +46,7 @@ function PrivateKeyDisplay(props: any) {
             onClick={(e) => {
               setShowPrivate(false);
             }}
-            className="bg-transparent hover:bg-aka-blue-light text-aka-blue font-semibold hover:text-white py-1 px-2 border border-aka-blue-light hover:border-transparent rounded"
+            className="bg-transparent border border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-[var(--primary)] font-semibold py-1 px-2 rounded"
           >
             hide private key
           </button>
@@ -60,7 +60,7 @@ function PrivateKeyDisplay(props: any) {
           onClick={(e) => {
             setShowPrivate(true);
           }}
-          className="bg-transparent hover:bg-aka-blue-light text-aka-blue font-semibold hover:text-white py-1 px-2 border border-aka-blue-light hover:border-transparent rounded"
+            className="bg-transparent border border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-[var(--primary)] font-semibold py-1 px-2 rounded"
         >
           show private key
         </button>
@@ -84,7 +84,7 @@ function Profile() {
 
   return (
     <div className="w-[360px]">
-      <div id="panel_outer" className="p-5">
+    <div id="panel_outer" className="p-5 bg-[var(--background)] text-[var(--foreground)]">
         {!showPrivate && (
           <div className="mb-3">
             <RecentSites
@@ -106,7 +106,7 @@ function Profile() {
                 id="top_row"
                 className="w-full flex flex-row flex-nowrap justify-between"
               >
-                <div className="font-semibold text-lg text-aka-blue">
+          <div className="font-semibold text-lg text-[var(--secondary)]">
                   <Link to={`/profiles/edit`}>{currentProfile.name}</Link>
                 </div>
                 <Link to={`/profiles/edit`}>

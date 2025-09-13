@@ -4,10 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "aka-blue": "#234e70",
-        "aka-blue-light": "#3E668A",
-        "aka-blue-dark": "#0b2235",
-        "aka-yellow": "#f8f1b8",
+        primary: {
+          light: '#ffffff', // white for light mode
+          dark: '#000000',  // black for dark mode
+        },
+        secondary: {
+          light: '#000000', // black for light mode
+          dark: '#ffffff',  // white for dark mode
+        },
       },
     },
   },
